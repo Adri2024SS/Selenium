@@ -1,0 +1,21 @@
+package org.educationit.selenium.claseCuatrotests;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+public class AutomationTest {
+  String url = "http://www.automationpractice.pl/index.php";
+    
+  @Test
+  public void testSignIn() throws Exception {
+	  WebDriver browser = new ChromeDriver();
+	  try {
+	  browser.get(url);
+	  Thread.sleep(3000);
+	  }
+	  finally {
+		  browser.quit();
+	  }
+  }
+}

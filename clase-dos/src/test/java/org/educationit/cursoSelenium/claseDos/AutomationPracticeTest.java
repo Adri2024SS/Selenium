@@ -6,10 +6,11 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.*;
 
+
 class AutomationPracticeTest {
 
 	// Atributos de la clase
-	// Las variables y atributos final no se modifican
+	// Las variables y atributos "final" no se modifican
 	static final String AUTOMATION_PRACTICE_HOME = "http://www.automationpractice.pl/index.php";
 
 	@Test
@@ -24,6 +25,7 @@ class AutomationPracticeTest {
 
 		WebDriver browser = new ChromeDriver();
 		try {
+			browser.manage().window().maximize();
 			browser.get(AUTOMATION_PRACTICE_HOME);
 			browser.findElement(By.id(SEARCH_INPUT_ID)).sendKeys(SEARCH_STRING);
 			browser.findElement(By.name(SEARCH_BUTTON_NAME)).click();
@@ -50,6 +52,7 @@ class AutomationPracticeTest {
 
 		WebDriver browser = new ChromeDriver();
 		try {
+			browser.manage().window().maximize();
 			browser.get(AUTOMATION_PRACTICE_HOME);
 			browser.findElement(By.id(SEARCH_INPUT_ID)).sendKeys(SEARCH_STRING);
 			browser.findElement(By.name(SEARCH_BUTTON_NAME)).click();

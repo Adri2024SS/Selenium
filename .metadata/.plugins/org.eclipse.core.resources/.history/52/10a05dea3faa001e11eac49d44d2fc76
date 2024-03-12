@@ -1,0 +1,45 @@
+package org.educationit.cursoSelenium.claseTres;
+
+import java.io.*;
+
+import org.apache.commons.io.FileUtils;
+import org.apache.poi.xwpf.usermodel.*;
+import org.apache.poi.xwpf.usermodel.XWPFRun;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class App {
+
+	public static void main(String[] args) throws Exception {
+		WebDriver browser = new ChromeDriver();
+		try {
+			browser.get("https://www.mercadolibre.com.ar/");
+			browser.manage().window().maximize();
+
+			// Casteo el objeto browser a una interfaz TakesScreenshot
+			// TakesScreenshot screenshotTaker = (TakesScreenshot) browser;
+			String rutaImagen = "./capturas/captura.png";
+			File screenshot = ((TakesScreenshot) browser).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(screenshot, new File("./capturas/captura.png"));
+
+			// Al documento word quiero agregarle la imagen
+			XWPFDocument doc = new XWPFDocument();
+			XWPFRun run = doc.createParagraph().createRun();
+			run.setText("Esta es la imagen:");
+			run.setFontSize(25);
+			run.addPicture(
+					new FileInputStream(rutaImagen),
+					Document.PICTURE_TYPE_PNG,
+					rutaImagen, 500, 200);
+			
+			doc.write(new FileOutputStream("./Evidencias/evidencia-word.docx"));
+			doc.close();
+			
+			Thread.sleep(4000);
+		} finally {
+			browser.quit();
+		}
+
+	}
+
+}

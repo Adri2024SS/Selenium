@@ -5,7 +5,7 @@
     <classes>
       <class name="org.educationit.selenium.claseCuatrotests.AutomationTest">
         <methods>
-          <include name="testMensajeError"/>
+          <include name="testSignIn"/>
         </methods>
       </class> <!-- org.educationit.selenium.claseCuatrotests.AutomationTest -->
     </classes>

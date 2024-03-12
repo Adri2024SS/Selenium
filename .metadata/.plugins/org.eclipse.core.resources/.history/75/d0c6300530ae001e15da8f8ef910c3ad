@@ -1,0 +1,18 @@
+package org.educationit.selenium.claseCinco;
+
+import org.openqa.selenium.WebDriver;
+
+public class HomePage {
+
+		WebDriver browser;
+		final String BASE_URL = "http://www.automationpractice.pl/index.php";
+		
+		public HomePage(WebDriver browser) {
+			this.browser = browser;
+		}
+
+		public void open() {
+			this.browser.get(BASE_URL);
+		}
+		
+}

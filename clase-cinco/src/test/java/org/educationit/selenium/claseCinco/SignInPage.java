@@ -13,6 +13,7 @@ public class SignInPage {
 
 	WebDriver browser;
 	
+	//El constructor de la clase SignInPage
 	public SignInPage(WebDriver browser) {
 		this.browser = browser;
 	}

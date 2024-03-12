@@ -1,0 +1,35 @@
+package org.educationit.selenium.claseCuatrotests;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
+
+public class AutomationTest {
+	String url = "http://www.automationpractice.pl/index.php";
+
+	@Test
+	public void testSignIn() throws Exception {
+		String xpathBotonSignIn ="/html/body/div/div[1]/header/div[2]/div/div/nav/div[1]/a";
+		String xpathTxtEmail = "//*[@id=\"email_create\"]";
+		
+		WebDriver browser = new ChromeDriver();
+		WebDriverWait waiter = new WebDriverWait(browser, Duration.ofSeconds(10));
+		try {
+			browser.get(url);
+			WebElement signInButton = browser.findElement(By.xpath(xpathBotonSignIn));
+			signInButton.click();
+			
+			WebElement txtEmail = waiter.until(ExpectedConditions.elementToBeClickable(By.xpath(xpathTxtEmail)));
+			
+			Thread.sleep(3000);
+		} finally {
+			browser.quit();
+		}
+	}
+}

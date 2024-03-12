@@ -92,7 +92,7 @@ public class AutomationTestWithPom {
 		try {
 			home.open();
 			SignInPage signIn = home.clickSignInLink();
-			signIn.createAccountWithEmail("pepe2028@gmail.com");
+			signIn.createAccountWithEmail("pepe20281@gmail.com");
 			signIn.completeCreateAccountForm(false, "Adriana", "Test", "root123", 20, 9, 1982, true);
 			Thread.sleep(3000);
 			Assert.assertEquals("Your account has been created.", signIn.getAccountCreationText().trim());

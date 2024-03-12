@@ -1,0 +1,27 @@
+package org.educationit.selenium.claseCinco;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class AutomationTestWithPom {
+//String url = "http://www.automationpractice.pl/index.php";
+  
+  @Test
+  public void testSignInEmptyEmail() throws Exception {
+	  WebDriver browser = new ChromeDriver();
+	  HomePage home = new HomePage(browser);
+	  try {
+		  home.open();
+		  SignInPage signIn = home.clickSignInLink();
+		  signIn.createAccountWithEmail("");
+		  Thread.sleep(500);
+		  Assert.assertEquals("Invalid email address.", signIn);
+		  Thread.sleep(5000);
+	  }finally {
+		  browser.quit();
+	  }
+	  
+  }
+}

@@ -1,0 +1,9 @@
+package org.educationit.selenium.claseCinco;
+
+import org.testng.annotations.Test;
+
+public class AutomationTestWithPom {
+  @Test
+  public void f() {
+  }
+}

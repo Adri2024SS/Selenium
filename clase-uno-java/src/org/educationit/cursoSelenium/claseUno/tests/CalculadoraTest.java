@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 class CalculadoraTest {
 
-	@Test
+	@Test //atributo que indica que es una prueba unitaria
 	void testSumar() {
 		int a = 10;
 		int b = 15;

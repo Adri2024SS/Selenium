@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-27T11:25:10 ART" name="Default suite" finished-at="2023-12-27T11:25:10 ART" duration-ms="29">
+  <suite started-at="2024-03-11T16:33:33 ART" name="Default suite" finished-at="2024-03-11T16:33:33 ART" duration-ms="34">
     <groups>
     </groups>
-    <test started-at="2023-12-27T11:25:10 ART" name="Default test" finished-at="2023-12-27T11:25:10 ART" duration-ms="29">
-      <class name="org.educationit.cursoSelenium.claseTres.test.DemoTestNG">
-        <test-method signature="testSumar()[pri:0, instance:org.educationit.cursoSelenium.claseTres.test.DemoTestNG@1eb5174b]" started-at="2023-12-27T11:25:10 ART" name="testSumar" finished-at="2023-12-27T11:25:10 ART" duration-ms="6" status="PASS">
+    <test started-at="2024-03-11T16:33:33 ART" name="Default test" finished-at="2024-03-11T16:33:33 ART" duration-ms="34">
+      <class name="org.educationitSelenium.claseTres.test.DemoTestNG">
+        <test-method signature="testRestar()[pri:0, instance:org.educationitSelenium.claseTres.test.DemoTestNG@16a0ee18]" started-at="2024-03-11T16:33:33 ART" name="testRestar" finished-at="2024-03-11T16:33:33 ART" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRestar -->
+        <test-method signature="testSumar()[pri:0, instance:org.educationitSelenium.claseTres.test.DemoTestNG@16a0ee18]" started-at="2024-03-11T16:33:33 ART" name="testSumar" finished-at="2024-03-11T16:33:33 ART" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSumar -->
-      </class> <!-- org.educationit.cursoSelenium.claseTres.test.DemoTestNG -->
+      </class> <!-- org.educationitSelenium.claseTres.test.DemoTestNG -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

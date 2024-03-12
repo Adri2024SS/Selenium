@@ -5,7 +5,7 @@
     <classes>
       <class name="org.educationit.selenium.claseCinco.AutomationTestWithPom">
         <methods>
-          <include name="testTabla"/>
+          <include name="testSignInSuccessfull"/>
         </methods>
       </class> <!-- org.educationit.selenium.claseCinco.AutomationTestWithPom -->
     </classes>

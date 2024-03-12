@@ -1,0 +1,32 @@
+package org.educationit.selenium.claseCinco;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class SignInPage {
+
+	WebDriver browser;
+	
+	public SignInPage(WebDriver browser) {
+		this.browser = browser;
+	}
+  
+	public void createAccountWithEmail(String email) {
+		String xpathBotonCreateAccount = "//*[@id=\"SubmitCreate\"]/span/i";
+		String xpathTxtEmail = "//*[@id=\"email_create\"]";
+		
+		WebDriverWait waiter = new WebDriverWait(browser, Duration.ofSeconds(10));
+		WebElement txtEmail = waiter.until(ExpectedConditions.elementToBeClickable(By.xpath(xpathTxtEmail)));
+		txtEmail.sendKeys(email);
+		
+		//Hacer click luego en el boton Create Account
+		browser.findElement(By.xpath(xpathBotonCreateAccount)).click();
+	}
+	
+		
+}

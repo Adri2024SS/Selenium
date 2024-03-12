@@ -24,6 +24,7 @@ public class Program {
 			WebElement botonBuscar = webBrowser.findElement(By.name("submit_search"));
 			botonBuscar.click();
 			
+			
 			Thread.sleep(3000);
 			WebElement spanSearchResult = webBrowser.findElement(By.className("heading-counter"));
 			//System.out.println(spanSearchResult.getText());

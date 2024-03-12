@@ -1,0 +1,14 @@
+package org.educationit.selenium.claseCinco;
+
+import org.openqa.selenium.WebDriver;
+
+public class HomePage {
+
+	public HomePage() {
+		
+		WebDriver browser;
+		
+		
+	}
+
+}

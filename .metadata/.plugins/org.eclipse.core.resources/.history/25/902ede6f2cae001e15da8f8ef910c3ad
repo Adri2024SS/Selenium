@@ -1,0 +1,10 @@
+package org.educationit.selenium.claseCinco;
+
+public class HomaPage {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

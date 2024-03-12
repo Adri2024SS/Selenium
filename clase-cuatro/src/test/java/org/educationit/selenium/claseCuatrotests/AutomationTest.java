@@ -19,7 +19,7 @@ public class AutomationTest {
 		String xpathBotonSignIn ="/html/body/div/div[1]/header/div[2]/div/div/nav/div[1]/a";
 		String xpathTxtEmail = "//*[@id=\"email_create\"]";
 		String xpathBotonCreateAccount = "//*[@id=\"SubmitCreate\"]/span/i";
-		String email = "mailprueba@gmail.com";
+		String email = "mailprueba12@gmail.com";
 		
 		WebDriver browser = new ChromeDriver();
 		WebDriverWait waiter = new WebDriverWait(browser, Duration.ofSeconds(10));
